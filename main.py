@@ -1,23 +1,13 @@
-"""Write a function called linear_search_product that takes the list of products and a target product 
+#1.2 - Write a program that determines whether a year entered by the user is a leap year or not using if-elif-else statements.
+def isLeapYear(year):
+  if (year%4==0 and year%100!=0) or year%400==0:
+    return True
+  else:
+    return False
 
-name as input. The function should perform a linear search to find the target product in the list and 
+year=2024
 
-return a list of indices of all occurrences of the product if found, or an empty list if the product is not 
-
-found."""
-
-def linearSearchProduct(ProductList,targetProduct):
-  indices = []
-  for index,product in enumerate (ProductList):
-    if product == targetProduct :
-      indices.append(index)
-
-  return indices
-
-#Example usage
-product =[ "shoes","boot","loafer","shoes","sandel","heels","shoes"]
-target = "shoes"
-target2= 'apple'
-result=linearSearchProduct(product,target )
-print(result)
-    
+if isLeapYear(year):
+  print("{} is leap year.".format(year))
+else:
+  print("{} is not leap year.".format(year))
